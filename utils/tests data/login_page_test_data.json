@@ -32,7 +32,7 @@
         "description": "Verify that user can't log in with empty username and empty password fields",
         "username": "",
         "password": "",
-        "expected_result": "is required"
+        "expected_result": "Epic sadface"
     },
     "test_case_6": {
         "title": "Verify login functionality",

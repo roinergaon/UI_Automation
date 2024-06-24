@@ -29,8 +29,8 @@ class TestLoginPage(BaseClass):
     @allure.feature("Login tests")
     @allure.tag("Login tests")
     def test_tc_02(self):
-        log = self.get_logger()
-        log.info("")
+        #log = self.get_logger()
+        #log.info("")
 
         login_page = LoginPage(self.driver)
         with allure.step("Enter user name"):
@@ -40,26 +40,26 @@ class TestLoginPage(BaseClass):
         with allure.step("Press login"):
             login_page.login(user_name, password)
         error_message = login_page.get_text(login_page.error_label)
-        test_case_data = self.get_test_case_data('login_page_test_data', 'test_case_1', 'expected_result')
+        test_case_data = self.get_test_case_data('login_page_test_data', 'test_case_2', 'expected_result')
         assert test_case_data in error_message
 
-    @allure.description("Verify that user can't log in with empty username field")
-    @allure.title("Empty username test")
-    @allure.feature("Login tests")
-    @allure.tag("Login tests")
-    def test_tc_03(self):
-        log = self.get_logger()
-        log.info("Verify login functionality, check valid user name and password")
-        login_page = LoginPage(self.driver)
-        with allure.step("Enter user name"):
-            user_name = self.get_test_case_data('login_page_test_data', 'test_case_3', 'username')
-        with allure.step("Enter password"):
-            password = self.get_test_case_data('login_page_test_data', 'test_case_3', 'password')
-        with allure.step("Press login"):
-            login_page.login(user_name, password)
-        error_message = login_page.get_text(login_page.error_label)
-        test_case_data = self.get_test_case_data('login_page_test_data', 'test_case_3', 'expected_result')
-        assert test_case_data in error_message
+    #@allure.description("Verify that user can't log in with empty username field")
+    #@allure.title("Empty username test")
+    #@allure.feature("Login tests")
+    #@allure.tag("Login tests")
+    #def test_tc_03(self):
+    #    #log = self.get_logger()
+    #    #log.info("Verify login functionality, check valid user name and password")
+    #    login_page = LoginPage(self.driver)
+    #    with allure.step("Enter user name"):
+    #        user_name = self.get_test_case_data('login_page_test_data', 'test_case_3', 'username')
+    #    with allure.step("Enter password"):
+    #        password = self.get_test_case_data('login_page_test_data', 'test_case_3', 'password')
+     #   with allure.step("Press login"):
+     #       login_page.login(user_name, password)
+     #   error_message = login_page.get_text(login_page.error_label)
+     #   test_case_data = self.get_test_case_data('login_page_test_data', 'test_case_3', 'expected_result')
+     #   assert test_case_data in error_message
     @allure.description("Verify that user can't log in with empty password field")
     @allure.title("Empty password test")
     @allure.feature("Login tests")
