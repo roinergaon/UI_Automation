@@ -1,0 +1,44 @@
+{
+    "test_case_1": {
+        "title": "Verify login functionality",
+        "description": "Verify that user can't log in with invalid username",
+        "username": "not_standard_user",
+        "password": "secret_sauce",
+        "expected_result": "Username and password do not match any user in this service"
+    },
+    "test_case_2": {
+        "title": "Verify login functionality",
+        "description": "Verify that user can't log in with invalid password",
+        "username": "standard_user",
+        "password": "secret",
+        "expected_result": "Username and password do not match any user in this service"
+    },
+    "test_case_3": {
+        "title": "Verify login functionality",
+        "description": "Verify that user can't log in with empty username field",
+        "username": "",
+        "password": "secret_sauce",
+        "expected_result": "Username is required"
+    },
+    "test_case_4": {
+        "title": "Verify login functionality",
+        "description": "Verify that user can't log in with empty password field",
+        "username": "standard_user",
+        "password": "",
+        "expected_result": "Username and password do not match any user in this service"
+    },
+    "test_case_5": {
+        "title": "Verify login functionality",
+        "description": "Verify that user can't log in with empty username and empty password fields",
+        "username": "",
+        "password": "",
+        "expected_result": "is required"
+    },
+    "test_case_6": {
+        "title": "Verify login functionality",
+        "description": "Verify that user can log in with valid username and password",
+        "username": "standard_user",
+        "password": "secret_sauce",
+        "expected_result": "Products"
+    }
+}
