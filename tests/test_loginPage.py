@@ -31,6 +31,7 @@ class TestLoginPage(BaseClass):
     def test_tc_02(self):
         log = self.get_logger()
         log.info("")
+
         login_page = LoginPage(self.driver)
         with allure.step("Enter user name"):
             user_name = self.get_test_case_data('login_page_test_data', 'test_case_2', 'username')
