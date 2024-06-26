@@ -11,7 +11,7 @@ class ProductsPage(MenuPage):
     products_label = (By.CSS_SELECTOR, ".inventory_item")
     products_price = (By.CSS_SELECTOR, ".inventory_item_price")
     cart = (By.CSS_SELECTOR, "#shopping_cart_container")
-    add_product_to_cart = (By.CSS_SELECTOR, "#add-to-cart-sauce-labs-backpack")
+    add_product_to_cart = (By.CSS_SELECTOR, "[class='btn btn_primary btn_small btn_inventory ']")
 
 
     def choose_product(self, name):
@@ -51,7 +51,7 @@ class ProductsPage(MenuPage):
         for el in elements:
             product_name = el.find_element(*self.products_title).text
             if product_name == name:
-                self.click_element(self.add_product_to_cart)
+                el.find_element(*self.add_product_to_cart).click()
 
 
 

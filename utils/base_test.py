@@ -3,8 +3,8 @@ import logging
 import os
 import pytest
 
-@pytest.mark.usefixtures("setup")
-class BaseClass:
+@pytest.mark.usefixtures("login_setup")
+class LoginBaseClass:
 
     def get_logger(self):
         logger = logging.getLogger('UI Automate testing')
@@ -32,3 +32,8 @@ class BaseClass:
             test_data = json.load(file)
 
         return test_data[test_case][expected_result]
+
+
+@pytest.mark.usefixtures("general_setup")
+class GeneralBaseClass:
+    pass

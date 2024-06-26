@@ -27,7 +27,7 @@ class BasePage:
         return element.text
 
     def is_displayed(self, locator):
-        element = self.find_element(locator)
+        element = self.driver.find_element(*locator)
         return element.is_displayed()
     def clear_field(self, element):
         element.clear()

@@ -5,9 +5,10 @@ import sys
 import allure
 from pageObjects.login_page import LoginPage
 from pageObjects.products_page import ProductsPage
-from utils.base_test import BaseClass
+from utils.base_test import LoginBaseClass
 
-class TestLoginPage(BaseClass):
+
+class TestLoginPage(LoginBaseClass):
     @allure.description("Verify that user can't log in with invalid username")
     @allure.title("Invalid username test")
     @allure.feature("Login tests")
