@@ -103,8 +103,8 @@ class TestLoginPage(BaseClass):
             password = self.get_test_case_data('login_page_test_data', 'test_case_6', 'password')
         with allure.step("Press login"):
             login_page.login(user_name, password)
-        product_page = ProductsPage(self.driver)
-        title = login_page.get_text(product_page.title)
+        product_pages = ProductsPage(self.driver)
+        title = login_page.get_text(product_pages.title)
         test_case_data = self.get_test_case_data('login_page_test_data', 'test_case_6', 'expected_result')
         assert test_case_data == title
 
