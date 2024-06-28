@@ -1,6 +1,8 @@
 
 from selenium.webdriver.common.by import By
 from pageObjects.menu_page import MenuPage
+from utils import highlight
+
 
 class ProductsPage(MenuPage):
     def __init__(self, driver):
@@ -51,7 +53,10 @@ class ProductsPage(MenuPage):
         for el in elements:
             product_name = el.find_element(*self.products_title).text
             if product_name == name:
-                el.find_element(*self.add_product_to_cart).click()
+                element = el.find_element(*self.add_product_to_cart)
+                highlight(element, self.driver)
+                element.click()
+                break
 
 
 

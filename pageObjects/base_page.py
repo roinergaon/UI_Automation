@@ -1,5 +1,8 @@
 import os
 import sys
+import time
+
+from utils import highlight
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 class BasePage:
@@ -14,6 +17,7 @@ class BasePage:
 
     def fill_text(self, locator, text):
         element = self.driver.find_element(*locator)
+        highlight(element, self.driver)
         element.click()
         element.clear()
         element.send_keys(text)

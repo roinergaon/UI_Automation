@@ -1,5 +1,7 @@
-from utils.base_test import BaseClass
-class TestProductOverviewPage(BaseClass):
+from base_test import GeneralBaseClass
+
+
+class TestProductOverviewPage(GeneralBaseClass):
     pass
 
 

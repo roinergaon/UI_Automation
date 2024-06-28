@@ -24,6 +24,7 @@ class CartPage(MenuPage):
             product__name = el.find_element(*self.product_name).text
             if product__name == name:
                 self.click_element(self.remove_product_from_cart)
+                break
 
 
 

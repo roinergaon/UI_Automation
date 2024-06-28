@@ -3,10 +3,10 @@ import sys
 
 #sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import allure
+
+from base_test import LoginBaseClass
 from pageObjects.login_page import LoginPage
 from pageObjects.products_page import ProductsPage
-from utils.base_test import LoginBaseClass
-
 
 class TestLoginPage(LoginBaseClass):
     @allure.description("Verify that user can't log in with invalid username")

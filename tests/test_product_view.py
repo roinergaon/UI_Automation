@@ -1,6 +1,7 @@
-from utils.base_test import BaseClass
+from base_test import GeneralBaseClass
 
-class ProductView(BaseClass):
+
+class ProductView(GeneralBaseClass):
     pass
 
 

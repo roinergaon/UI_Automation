@@ -1,6 +1,7 @@
-from utils.base_test import BaseClass
+from base_test import GeneralBaseClass
 
-class TestBuyProduct(BaseClass):
+
+class TestBuyProduct(GeneralBaseClass):
     def test_buy_single_product(self):
         pass
     def test_buy_multiple_products(self):
