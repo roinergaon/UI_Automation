@@ -20,6 +20,7 @@ class ProductsPage(MenuPage):
         elements = self.find_all_elements(*self.products_title, name)
         for el in elements:
             if el.text == name:
+                highlight(el, self.driver)
                 el.click()
                 break
     def open_cart(self):
@@ -29,6 +30,7 @@ class ProductsPage(MenuPage):
         all_prices = []
         elements = self.find_all_elements(self.products_price)
         for el in elements:
+            highlight(el, self.driver)
             price = el.text
             price_without_symbol = price[1:]
             price_float = float(price_without_symbol)

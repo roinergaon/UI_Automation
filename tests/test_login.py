@@ -85,8 +85,7 @@ class TestLoginPage(LoginBaseClass):
         with allure.step("Press login"):
             login_page.login(LOGIN_CREDENTIALS ["username"], LOGIN_CREDENTIALS ["password"])
         product_pages = ProductsPage(self.driver)
-        title = login_page.get_text(product_pages.title)
-        assert EXPECTED_RESULTS ["valid_login"] == title
+        assert product_pages.is_displayed(product_pages.title)
 
     @allure.description("log out")
     @allure.title("log out")

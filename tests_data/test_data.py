@@ -18,7 +18,7 @@ EXPECTED_RESULTS = {
     "empty_username": "Username is required",
     "empty_password": "Username and password do not match any user in this service",
     "empty_username_password": "Epic sadface",
-    "valid_login": "Products"
+    "products_page_validation": "Products"
 }
 
 PRODUCTS = {
@@ -28,4 +28,17 @@ PRODUCTS = {
     "fleece_jacket": "Sauce Labs Fleece Jacket",
     "onesie": "Sauce Labs Onesie",
     "red_tshirt": "Test.allTheThings() T-Shirt (Red)"
+}
+
+INFORMATION_PAGE = {
+    "first_name": "Roi",
+    "last_name": "Ner Gaon",
+    "postal_code": "7954187"
+}
+
+ERROR_MESSAGES = {
+    "empty_first_name": "First Name is required",
+    "empty_last_name": "Last Name is required",
+    "empty_postal_code": "Postal Code is required",
+    "empty_all_fields": "First Name is required"
 }

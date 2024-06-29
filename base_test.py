@@ -37,3 +37,4 @@ class LoginBaseClass:
 @pytest.mark.usefixtures("general_setup")
 class GeneralBaseClass:
     pass
+

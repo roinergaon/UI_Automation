@@ -24,15 +24,20 @@ class BasePage:
 
     def click_element(self, locator):
         element = self.driver.find_element(*locator)
+        highlight(element, self.driver)
         element.click()
 
     def get_text(self, locator):
         element = self.driver.find_element(*locator)
+        highlight(element, self.driver)
         return element.text
 
     def is_displayed(self, locator):
         element = self.driver.find_element(*locator)
+        highlight(element, self.driver)
         return element.is_displayed()
-    def clear_field(self, element):
+    def clear_field(self, locator):
+        element = self.driver.find_element(*locator)
+        highlight(element, self.driver)
         element.clear()
 

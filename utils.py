@@ -1,7 +1,7 @@
 import time
 
 
-def highlight(element, driver, duration=1):
+def highlight(element, driver, duration=0.5):
     """Highlights (blinks) a Selenium Webdriver element."""
     def apply_style(s):
         driver.execute_script("arguments[0].setAttribute('style', arguments[1]);", element, s)
