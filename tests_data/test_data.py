@@ -1,7 +1,24 @@
 # test_data.py
+
 LOGIN_CREDENTIALS = {
     "username": "standard_user",
     "password": "secret_sauce"
+}
+
+INVALID_LOGIN_CREDENTIALS = {
+    "invalid_username": "not_standard_user",
+    "invalid_password": "secret",
+    "empty_username": "",
+    "empty_password": ""
+}
+
+EXPECTED_RESULTS = {
+    "invalid_username_valid_password": "Username and password do not match any user in this service",
+    "valid_username_invalid_password": "Username and password do not match any user in this service",
+    "empty_username": "Username is required",
+    "empty_password": "Username and password do not match any user in this service",
+    "empty_username_password": "Epic sadface",
+    "valid_login": "Products"
 }
 
 PRODUCTS = {

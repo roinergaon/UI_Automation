@@ -15,8 +15,6 @@ def login_setup(request):
     driver.maximize_window()
     driver.get("https://www.saucedemo.com/")
 
-
-
     request.cls.driver = driver
     yield
     driver.close()
