@@ -1,6 +1,5 @@
 
 # My Automation Project 
-This is a testing automation project
 
 ## 📖 Overview
 
