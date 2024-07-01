@@ -1,18 +1,4 @@
 https://github.com/roinergaon/UI_Automation/assets/50953734/a8baf17d-5b0c-4166-bd4e-66e719eea1bf
-
-
-## 📖 Overview
-
-This repository contains a comprehensive automated testing project built with python, pytest, Jenkins and Allure Reports. 
-The project follows the Page Object Model (POM) design pattern for a modular and maintainable test suite.
-
-## 📊 Reports Examples
-![Allure_1](https://github.com/roinergaon/UI_Automation/assets/50953734/ed6d5651-465c-4b2d-9039-6630b804aed5)
-![3](https://github.com/roinergaon/UI_Automation/assets/50953734/a4e37f75-8187-4d04-af51-d2349f11cece)
-![Allure_2](https://github.com/roinergaon/UI_Automation/assets/50953734/dddbfb6e-fa24-45f9-84b2-f658bd4aa184)
-![Jenkins](https://github.com/roinergaon/UI_Automation/assets/50953734/9a331ae6-814c-46f6-8406-1e2cc531082b)
-
-
 ## 📑 Technologies & Skill & Features
 | Technologies      | Description |
 | ----------- | ----------- |
@@ -23,12 +9,15 @@ The project follows the Page Object Model (POM) design pattern for a modular and
 | **Allure Reports:**   | Test results are documented using Allure Reports, providing a clear and interactive visualization of test execution.        |
 | **Jenkins:**   | Continuous integration and continuous delivery (CI/CD) platform for automated builds and deployments.        |
 
+## 📖 Overview
+This repository contains a comprehensive automated testing project built with python.
+The project follows the Page Object Model (POM) design pattern for a modular and maintainable test suite.
 
-<p>
-  
-  <img src="ScreenShots/tc02_addTask1615288676297.jpg" width="40%" title="Example for screenshot on failure"  />
-  <img src="ScreenShots/tc01_addTask1614893191281.jpg" width="40%" alt="Example for screenshot on failure" />
-</p>
+## 📊 Reports Examples
+![Allure_1](https://github.com/roinergaon/UI_Automation/assets/50953734/ed6d5651-465c-4b2d-9039-6630b804aed5)
+![3](https://github.com/roinergaon/UI_Automation/assets/50953734/a4e37f75-8187-4d04-af51-d2349f11cece)
+![Allure_2](https://github.com/roinergaon/UI_Automation/assets/50953734/dddbfb6e-fa24-45f9-84b2-f658bd4aa184)
+![Jenkins](https://github.com/roinergaon/UI_Automation/assets/50953734/9a331ae6-814c-46f6-8406-1e2cc531082b)
 
 ## 📁 Project Structure
 ```
