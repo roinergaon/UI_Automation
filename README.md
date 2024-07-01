@@ -1,4 +1,5 @@
-https://github.com/roinergaon/UI_Automation/assets/50953734/79e4d1a4-935a-4597-a022-b16274e59b8d
+https://github.com/roinergaon/UI_Automation/assets/50953734/a8baf17d-5b0c-4166-bd4e-66e719eea1bf
+![Allure_1](https://github.com/roinergaon/UI_Automation/assets/50953734/01afc239-3e06-48a9-866a-4c28df0e78bc)
 
 ## 📖 Overview
 
@@ -17,15 +18,15 @@ The project follows the Page Object Model (POM) design pattern for a modular and
 
 ## 📊 Reports Examples
 <p>
+  
   <img src="ScreenShots/tc02_addTask1615288676297.jpg" width="40%" title="Example for screenshot on failure"  />
   <img src="ScreenShots/tc01_addTask1614893191281.jpg" width="40%" alt="Example for screenshot on failure" />
 </p>
 
 ## 📁 Project Structure
 ```
-│   log_info.log
-│   utils.py
-├───allure-reports
+├───allure-report     
+│   │
 ├───pageObjects
 │   │   base_page.py
 │   │   cart_page.py
@@ -37,24 +38,20 @@ The project follows the Page Object Model (POM) design pattern for a modular and
 │   │   products_page.py
 │   │   single_product_page.py
 │   │   __init__.py
-│   │
-
 ├───tests
 │   │   conftest.py
 │   │   log_info.log
 │   │   test_add_to_cart.py
-│   │   test_buy_product.py
 │   │   test_customer_information.py
 │   │   test_login.py
 │   │   test_order_completion.py
 │   │   Test_products_overview.py
 │   │   test_product_view.py
 │   │   __init__.py
-│
 ├───tests_data
 │   │   test_data.py
-│   
-├───utils 
+│
+└───
 ```
 Roi Ner Gaon 
 
