@@ -18,7 +18,10 @@ EXPECTED_RESULTS = {
     "empty_username": "Username is required",
     "empty_password": "Username and password do not match any user in this service",
     "empty_username_password": "Epic sadface",
-    "products_page_validation": "Products"
+    "products_page_validation": "Products",
+    "cart_page_validation": "Your Cart",
+    "order_validation": "Thank you for your order!",
+    "order_validation_fail_scenario": "Thank you"
 }
 
 PRODUCTS = {

@@ -35,7 +35,7 @@ class TestProductOverviewPage():
         overViewPage.click_element(overViewPage.finish)
         orderCompletion_Page = OrderCompletionPage(self.driver)
         order_confirmation_message = orderCompletion_Page.get_text(orderCompletion_Page.order_confirmation)
-        assert order_confirmation_message == "Thank you for your order!"
+        assert order_confirmation_message == EXPECTED_RESULTS["order_validation"]
 
 
 

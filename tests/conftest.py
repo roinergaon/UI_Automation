@@ -1,3 +1,6 @@
+import os
+import sys
+#sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 import allure
 from allure_commons.types import AttachmentType
 from selenium import webdriver
@@ -7,10 +10,7 @@ from pageObjects.customer_information_page import InformationPage
 from pageObjects.login_page import LoginPage
 from pageObjects.products_page import ProductsPage
 from tests_data.test_data import LOGIN_CREDENTIALS, PRODUCTS, INFORMATION_PAGE
-
-
 import pytest
-
 @pytest.fixture()
 def log_on_failure(request):
     yield
@@ -23,7 +23,6 @@ def pytest_runtest_makereport(item, call):
     rep = outcome.get_result()
     setattr(item, "rep_" + rep.when, rep)
     return rep
-
 @pytest.fixture(scope="class")
 def login_setup(request):
     global driver

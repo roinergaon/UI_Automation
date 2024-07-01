@@ -1,12 +1,11 @@
 import allure
 import pytest
-
 from pageObjects.cart_page import CartPage
 from pageObjects.customer_information_page import InformationPage
 from pageObjects.order_completion_page import OrderCompletionPage
 from pageObjects.overview_page import OverViewPage
 from pageObjects.products_page import ProductsPage
-from tests_data.test_data import INFORMATION_PAGE, PRODUCTS
+from tests_data.test_data import INFORMATION_PAGE, PRODUCTS, EXPECTED_RESULTS
 from utils import add_multiple_products_to_cart
 @pytest.mark.usefixtures("overview_setup", "log_on_failure")
 class TestLoginPage():
@@ -26,7 +25,7 @@ class TestLoginPage():
         orderCompletion_Page = OrderCompletionPage(self.driver)
         order_confirmation_message = orderCompletion_Page.get_text(orderCompletion_Page.order_confirmation)
         orderCompletion_Page.click_element(OrderCompletionPage.return_back)
-        assert order_confirmation_message == "Thank you for your order!"
+        assert order_confirmation_message == EXPECTED_RESULTS["order_validation"]
 
     @allure.description("Verify user can buy multiple items")
     @allure.title("Multiple Items Purchase Test")
@@ -44,7 +43,7 @@ class TestLoginPage():
         overViewPage.click_element(overViewPage.finish)
         orderCompletion_Page = OrderCompletionPage(self.driver)
         order_confirmation_message = orderCompletion_Page.get_text(orderCompletion_Page.order_confirmation)
-        assert order_confirmation_message == "Thank you for your order!"
+        assert order_confirmation_message == EXPECTED_RESULTS["order_validation"]
 
     @allure.description("Verify user can buy multiple items")
     @allure.title("Multiple Items Purchase Test")
@@ -62,5 +61,5 @@ class TestLoginPage():
         overViewPage.click_element(overViewPage.finish)
         orderCompletion_Page = OrderCompletionPage(self.driver)
         order_confirmation_message = orderCompletion_Page.get_text(orderCompletion_Page.order_confirmation)
-        assert order_confirmation_message == "Thank you"
+        assert order_confirmation_message == EXPECTED_RESULTS["order_validation_fail_scenario"]
 

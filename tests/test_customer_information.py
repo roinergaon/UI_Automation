@@ -3,7 +3,9 @@ import pytest
 from pageObjects.cart_page import CartPage
 from pageObjects.customer_information_page import InformationPage
 from pageObjects.overview_page import OverViewPage
-from tests_data.test_data import INFORMATION_PAGE, ERROR_MESSAGES
+from tests_data.test_data import INFORMATION_PAGE, ERROR_MESSAGES, EXPECTED_RESULTS
+
+
 @pytest.mark.usefixtures("customer_information_setup", "log_on_failure")
 class TestCustomerInformationPage:
     @allure.description("Verify error message for empty first name")
@@ -67,4 +69,4 @@ class TestCustomerInformationPage:
         information_Page.click_element(information_Page.cancel)
         cart_page = CartPage(self.driver)
         text = cart_page.get_text(cart_page.title)
-        assert text == "Your Cart"
+        assert text == EXPECTED_RESULTS["cart_page_validation"]

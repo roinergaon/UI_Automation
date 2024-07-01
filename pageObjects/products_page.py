@@ -1,9 +1,7 @@
-
+import allure
 from selenium.webdriver.common.by import By
 from pageObjects.menu_page import MenuPage
 from utils import highlight
-
-
 class ProductsPage(MenuPage):
     def __init__(self, driver):
         super().__init__(driver)
@@ -15,14 +13,14 @@ class ProductsPage(MenuPage):
     cart = (By.CSS_SELECTOR, "#shopping_cart_container")
     add_product_to_cart = (By.CSS_SELECTOR, "[class='btn btn_primary btn_small btn_inventory ']")
 
-
     def choose_product(self, name):
-        elements = self.find_all_elements(self.products_title)
-        for el in elements:
-            if el.text == name:
-                highlight(el, self.driver)
-                el.click()
-                break
+        with allure.step(f"Press {name} item"):
+            elements = self.find_all_elements(self.products_title)
+            for el in elements:
+                if el.text == name:
+                    highlight(el, self.driver)
+                    el.click()
+                    break
     def open_cart(self):
         self.click_element(self.cart)
 
@@ -51,14 +49,15 @@ class ProductsPage(MenuPage):
                 return price_float
 
     def add_to_cart(self, name):
-        elements = self.find_all_elements(self.products_label)
-        for el in elements:
-            product_name = el.find_element(*self.products_title).text
-            if product_name == name:
-                element = el.find_element(*self.add_product_to_cart)
-                highlight(element, self.driver)
-                element.click()
-                break
+        with allure.step(f"Add {name} to cart"):
+            elements = self.find_all_elements(self.products_label)
+            for el in elements:
+                product_name = el.find_element(*self.products_title).text
+                if product_name == name:
+                    element = el.find_element(*self.add_product_to_cart)
+                    highlight(element, self.driver)
+                    element.click()
+                    break
 
 
 
