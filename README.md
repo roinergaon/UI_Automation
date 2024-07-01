@@ -46,8 +46,8 @@ The project follows the Page Object Model (POM) design pattern for a modular and
 │   │   __init__.py
 ├───tests_data
 │   │   test_data.py
-│
-└───
+│────configuration.py
+└───utils.py
 ```
 Roi Ner Gaon 
 
