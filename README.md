@@ -1,6 +1,4 @@
 
-# My Automation Project 
-
 ## 📖 Overview
 
 This repository contains a comprehensive automated testing project built with python, pytest, Jenkins and Allure Reports. 
