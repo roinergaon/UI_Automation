@@ -1,5 +1,5 @@
 https://github.com/roinergaon/UI_Automation/assets/50953734/a8baf17d-5b0c-4166-bd4e-66e719eea1bf
-![Allure_1](https://github.com/roinergaon/UI_Automation/assets/50953734/01afc239-3e06-48a9-866a-4c28df0e78bc)
+
 
 ## 📖 Overview
 
