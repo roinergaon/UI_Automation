@@ -6,6 +6,9 @@ https://github.com/roinergaon/UI_Automation/assets/50953734/a8baf17d-5b0c-4166-b
 This repository contains a comprehensive automated testing project built with python, pytest, Jenkins and Allure Reports. 
 The project follows the Page Object Model (POM) design pattern for a modular and maintainable test suite.
 
+![Allure_1](https://github.com/roinergaon/UI_Automation/assets/50953734/ed6d5651-465c-4b2d-9039-6630b804aed5)
+
+
 ## 📑 Technologies & Skill & Features
 | Technologies      | Description |
 | ----------- | ----------- |
