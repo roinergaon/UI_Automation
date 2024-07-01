@@ -4,8 +4,7 @@ from pageObjects.menu_page import MenuPage
 
 
 class OrderCompletionPage(MenuPage):
-    def __init__(self, driver):
-        super().__init__(driver)
+
 
     title = (By.CSS_SELECTOR, "[class='title']")
     order_confirmation = (By.CSS_SELECTOR, "[class='complete-header']")

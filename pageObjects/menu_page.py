@@ -6,8 +6,6 @@ from pageObjects.base_page import BasePage
 
 
 class MenuPage(BasePage):
-    def __init__(self, driver):
-        self.driver = driver
 
     all_items = (By.CSS_SELECTOR, "#inventory_sidebar_link")
     log_out = (By.CSS_SELECTOR, "#logout_sidebar_link")

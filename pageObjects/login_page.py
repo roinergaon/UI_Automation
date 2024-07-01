@@ -5,8 +5,6 @@ sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from selenium.webdriver.common.by import By
 from pageObjects.base_page import BasePage
 class LoginPage(BasePage):
-    def __init__(self, driver):
-        super().__init__(driver)
 
     user = (By.CSS_SELECTOR, "#user-name")
     password = (By.CSS_SELECTOR, "#password")

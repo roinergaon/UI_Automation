@@ -2,9 +2,6 @@ from selenium.webdriver.common.by import By
 from pageObjects.menu_page import MenuPage
 
 class InformationPage(MenuPage):
-    def __init__(self, driver):
-        super().__init__(driver)
-
 
     first_name = (By.ID, "first-name")
     last_name = (By.CSS_SELECTOR, "[data-test='lastName']")

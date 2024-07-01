@@ -8,7 +8,7 @@ from pageObjects.products_page import ProductsPage
 from tests_data.test_data import INFORMATION_PAGE, PRODUCTS, EXPECTED_RESULTS
 from utils import add_multiple_products_to_cart
 @pytest.mark.usefixtures("overview_setup", "log_on_failure")
-class TestLoginPage():
+class TestOrderCompletionPage():
     @allure.description("Verify user can buy a single item")
     @allure.title("Single Item Purchase Test")
     @allure.feature("Order Completion Tests")

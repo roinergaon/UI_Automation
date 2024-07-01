@@ -4,8 +4,6 @@ from utils import highlight
 
 
 class CartPage(MenuPage):
-    def __init__(self, driver):
-        super().__init__(driver)
 
     title =  (By.CSS_SELECTOR, "[data-test='title']")
     cart_lable =  (By.CSS_SELECTOR, ".cart_item_label")

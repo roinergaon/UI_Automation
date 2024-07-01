@@ -3,8 +3,6 @@ from selenium.webdriver.common.by import By
 from pageObjects.menu_page import MenuPage
 from utils import highlight
 class ProductsPage(MenuPage):
-    def __init__(self, driver):
-        super().__init__(driver)
 
     title = (By.CSS_SELECTOR, "[class='title']")
     products_title = (By.CSS_SELECTOR, ".inventory_item_name")
