@@ -17,7 +17,7 @@ class ProductsPage(MenuPage):
 
 
     def choose_product(self, name):
-        elements = self.find_all_elements(*self.products_title, name)
+        elements = self.find_all_elements(self.products_title)
         for el in elements:
             if el.text == name:
                 highlight(el, self.driver)

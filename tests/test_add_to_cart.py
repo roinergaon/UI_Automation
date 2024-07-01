@@ -8,7 +8,12 @@ from tests_data.test_data import PRODUCTS
 
 
 class TestAddProductToCart(GeneralBaseClass):
-    def test_add_single_product_to_cart(self):
+
+    @allure.description("Test adding a single item to the cart")
+    @allure.title("Add Single Item to Cart Test")
+    @allure.feature("Cart Tests")
+    @allure.tag("Cart Tests")
+    def test_tc_01(self):
         products_page = ProductsPage(self.driver)
         products_page.add_to_cart(PRODUCTS["backpack"])
         products_page.open_cart()
@@ -17,7 +22,12 @@ class TestAddProductToCart(GeneralBaseClass):
         cart_page.remove_product(PRODUCTS["backpack"])
         cart_page.return_to_products_list()
         assert is_exists
-    def test_remove_single_product_to_cart(self):
+
+    @allure.description("Test removing a single product from the cart")
+    @allure.title("Remove Single Item from Cart Test")
+    @allure.feature("Cart Tests")
+    @allure.tag("Cart Tests")
+    def test_tc_02(self):
         products_page = ProductsPage(self.driver)
         products_page.add_to_cart(PRODUCTS["backpack"])
         products_page.open_cart()
@@ -27,8 +37,12 @@ class TestAddProductToCart(GeneralBaseClass):
         cart_page.return_to_products_list()
         assert not is_found, f'{PRODUCTS["backpack"]} still inside the cart_page'
 
+    @allure.description("Test adding multiple products to the cart")
+    @allure.title("Add Multiple Products to Cart Test")
+    @allure.feature("Cart Tests")
+    @allure.tag("Cart Tests")
     @pytest.mark.parametrize("product_name", PRODUCTS.keys())
-    def test_add_multiple_products_to_cart(self, product_name):
+    def test_tc_03(self, product_name):
         products_page = ProductsPage(self.driver)
         products_page.add_to_cart(PRODUCTS[product_name])
         products_page.open_cart()
@@ -36,8 +50,12 @@ class TestAddProductToCart(GeneralBaseClass):
         assert cart_page.is_product_in_cart(PRODUCTS[product_name]), f"{PRODUCTS[product_name]} is not available in the cart"
         cart_page.return_to_products_list()
 
+    @allure.description("Test removing multiple items from the cart")
+    @allure.title("Remove Multiple Items from Cart Test")
+    @allure.feature("Cart Tests")
+    @allure.tag("Cart Tests")
     @pytest.mark.parametrize("product_name", PRODUCTS.keys())
-    def test_remove_multiple_products_from_cart(self, product_name):
+    def test_tc_04(self, product_name):
         products_page = ProductsPage(self.driver)
         products_page.open_cart()
         cart_page = CartPage(self.driver)
@@ -46,7 +64,11 @@ class TestAddProductToCart(GeneralBaseClass):
         cart_page.return_to_products_list()
         assert not is_found, f"{PRODUCTS[product_name]} still inside the cart_page"
 
-    def test_continue_shopping(self):
+    @allure.description("Test continue shopping functionality")
+    @allure.title("Continue Shopping Test")
+    @allure.feature("Cart Tests")
+    @allure.tag("Cart Tests")
+    def test_tc_05(self):
         products_page = ProductsPage(self.driver)
         products_page.add_to_cart(PRODUCTS["backpack"])
         products_page.open_cart()
@@ -54,26 +76,3 @@ class TestAddProductToCart(GeneralBaseClass):
         cart.return_to_products_page()
         is_title_displayed = products_page.is_displayed(products_page.title)
         assert is_title_displayed
-
-
-    # def test_remove_item_from_cart(self):
-    #     login_page = LoginPage(self.driver)
-    #     products_page = ProductsPage(self.driver)
-    #     products_page.add_to_cart("Sauce Labs Backpack")
-    #     products_page.open_cart()
-    #     cart = CartPage(self.driver)
-    #     cart.remove_product("Sauce Labs Backpack")
-    #     is_item_in_cart = cart.is_product_in_cart("Sauce Labs Backpack")
-    #     cart.return_to_products_page()
-    #     assert not is_item_in_cart, "item still found in the cart"
-    #
-    #     # cart.return_to_products_page()
-    #
-    # def test_add_product_to_cart_updates_cart_total(self):
-    #     pass
-    #
-    # def test_add_product_to_cart_and_verify_cart_contents(self):
-    #     pass
-    #
-    # def test_add_product_to_cart_and_check_cart_summary(self):
-    #     pass
