@@ -15,7 +15,7 @@ https://github.com/roinergaon/UI_Automation/assets/50953734/a8baf17d-5b0c-4166-b
 This repository contains a comprehensive automated testing project built with python.
 The project follows the Page Object Model (POM) design pattern for a modular and maintainable test suite.
 
-## 📊 Reports Examples
+## 📊 Reports
 ![Allure_1](https://github.com/roinergaon/UI_Automation/assets/50953734/ed6d5651-465c-4b2d-9039-6630b804aed5)
 ![3](https://github.com/roinergaon/UI_Automation/assets/50953734/a4e37f75-8187-4d04-af51-d2349f11cece)
 ![Allure_2](https://github.com/roinergaon/UI_Automation/assets/50953734/dddbfb6e-fa24-45f9-84b2-f658bd4aa184)
