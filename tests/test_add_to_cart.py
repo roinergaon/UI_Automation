@@ -4,6 +4,7 @@ from pageObjects.cart_page import CartPage
 from pageObjects.products_page import ProductsPage
 from tests_data.test_data import PRODUCTS
 @pytest.mark.usefixtures("general_setup")
+
 class TestAddProductToCart():
     @allure.description("Test adding a single item to the cart")
     @allure.title("Add Single Item to Cart Test")
