@@ -11,6 +11,7 @@ class LoginPage(BasePage):
     login_button = (By.CSS_SELECTOR, "#login-button")
     error_label = (By.CSS_SELECTOR, "[data-test='error']")
 
+
     def login(self, username, password):
         with allure.step("Insert username"):
             self.fill_text(self.user, username)

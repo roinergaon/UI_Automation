@@ -11,6 +11,7 @@ class ProductsPage(MenuPage):
     cart = (By.CSS_SELECTOR, "#shopping_cart_container")
     add_product_to_cart = (By.CSS_SELECTOR, "[class='btn btn_primary btn_small btn_inventory ']")
 
+
     def choose_product(self, name):
         with allure.step(f"Press {name} item"):
             elements = self.find_all_elements(self.products_title)

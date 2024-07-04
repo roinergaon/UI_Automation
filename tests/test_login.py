@@ -14,6 +14,7 @@ class TestLoginPage():
         login_page.login(INVALID_LOGIN_CREDENTIALS["invalid_username"], LOGIN_CREDENTIALS["password"])
         error_message = login_page.get_text(login_page.error_label)
         assert EXPECTED_RESULTS[ "invalid_username_valid_password"] in error_message
+
     @allure.description("Verify that user can't log in with invalid password")
     @allure.title("Invalid Password Test")
     @allure.feature("Login Tests")

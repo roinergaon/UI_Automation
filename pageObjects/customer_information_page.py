@@ -10,6 +10,7 @@ class InformationPage(MenuPage):
     error_message = (By.CSS_SELECTOR, "[data-test='error']")
     cancel = (By.CSS_SELECTOR, "[class='btn btn_secondary back btn_medium cart_cancel_link']")
 
+
     def continue_with_purchase(self):
         self.click_element(self.continue_purchase)
     def enter_information(self, first_name, last_name, zip_postal_code):

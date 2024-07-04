@@ -12,6 +12,7 @@ class CartPage(MenuPage):
     remove_product_from_cart = (By.CSS_SELECTOR, "[class='btn btn_secondary btn_small cart_button']")
     checkout = (By.CSS_SELECTOR, "#checkout")
 
+
     def is_product_in_cart(self,name):
         elements = self.driver.find_elements(*self.cart_lable)
         for el in elements:
