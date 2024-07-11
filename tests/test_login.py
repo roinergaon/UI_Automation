@@ -1,15 +1,18 @@
 import allure
 import pytest
+import utils
 from pageObjects.login_page import LoginPage
 from pageObjects.products_page import ProductsPage
 from tests_data.test_data import INVALID_LOGIN_CREDENTIALS, LOGIN_CREDENTIALS, EXPECTED_RESULTS
 @pytest.mark.usefixtures("login_setup", "log_on_failure")
 class TestLoginPage():
+
     @allure.description("Verify that user can't log in with invalid username")
     @allure.title("Invalid Username Test")
     @allure.feature("Login Tests")
     @allure.tag("Login Tests")
     def test_tc_01(self):
+
         login_page = LoginPage(self.driver)
         login_page.login(INVALID_LOGIN_CREDENTIALS["invalid_username"], LOGIN_CREDENTIALS["password"])
         error_message = login_page.get_text(login_page.error_label)

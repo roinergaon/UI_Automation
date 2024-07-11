@@ -19,7 +19,7 @@ def add_multiple_products_to_cart(items_list, products_page):
         products_page.add_to_cart(PRODUCTS[item])
 
 
-def get_logger(self):
+def get_logger():
     logger = logging.getLogger('UI Automate testing')
     logger.setLevel(logging.INFO)  # Set the logging level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
 

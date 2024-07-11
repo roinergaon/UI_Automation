@@ -1,10 +1,17 @@
 import os
 import sys
 import allure
+
+import utils
+
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 from selenium.webdriver.common.by import By
 from pageObjects.base_page import BasePage
 class LoginPage(BasePage):
+
+    # def __init__(self, driver):
+    #     super().__init__(driver)
+    #     self.logger = utils.get_logger()
 
     user = (By.CSS_SELECTOR, "#user-name")
     password = (By.CSS_SELECTOR, "#password")
@@ -13,8 +20,10 @@ class LoginPage(BasePage):
 
 
     def login(self, username, password):
+        self.logger.info(f"Insert username: {username}")
         with allure.step("Insert username"):
             self.fill_text(self.user, username)
+        self.logger.info(f"Insert password: {password}")
         with allure.step("Insert password"):
             self.fill_text(self.password, password)
         with allure.step("press login"):
