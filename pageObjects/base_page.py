@@ -1,12 +1,6 @@
-import os
-import sys
-import time
-
 import utils
 from utils import highlight
 
-
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
