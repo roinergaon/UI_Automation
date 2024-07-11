@@ -19,6 +19,8 @@ The project follows the Page Object Model (POM) design pattern for a modular and
 ![Allure_1](https://github.com/roinergaon/UI_Automation/assets/50953734/ed6d5651-465c-4b2d-9039-6630b804aed5)
 ![3](https://github.com/roinergaon/UI_Automation/assets/50953734/a4e37f75-8187-4d04-af51-d2349f11cece)
 ![Allure_2](https://github.com/roinergaon/UI_Automation/assets/50953734/dddbfb6e-fa24-45f9-84b2-f658bd4aa184)
+![4](https://github.com/roinergaon/UI_Automation/assets/50953734/a9da39b4-cf5f-473d-9a59-eb4b94e1de09)
+
 ![Jenkins](https://github.com/roinergaon/UI_Automation/assets/50953734/9a331ae6-814c-46f6-8406-1e2cc531082b)
 
 ## 📁 Project Structure
