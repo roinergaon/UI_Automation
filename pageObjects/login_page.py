@@ -9,10 +9,6 @@ from selenium.webdriver.common.by import By
 from pageObjects.base_page import BasePage
 class LoginPage(BasePage):
 
-    # def __init__(self, driver):
-    #     super().__init__(driver)
-    #     self.logger = utils.get_logger()
-
     user = (By.CSS_SELECTOR, "#user-name")
     password = (By.CSS_SELECTOR, "#password")
     login_button = (By.CSS_SELECTOR, "#login-button")
